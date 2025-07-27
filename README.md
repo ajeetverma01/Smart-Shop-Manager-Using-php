@@ -41,9 +41,6 @@ Follows a **3-tier architecture**:
 - Multi-shop Support  
 - Cloud Hosting
 
-## 📷 Screenshots
-
-_Add screenshots here if needed_
 
 ## 📚 References
 
