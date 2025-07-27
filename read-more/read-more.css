@@ -1,0 +1,184 @@
+/* Reset & base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  background: #003366;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 7%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navbar a {
+  color: #fff;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+/* Main content */
+.main-content {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 7%;
+}
+
+.about-section {
+  background: #fff;
+  padding: 40px;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  animation: fadeInBox 1s ease forwards;
+}
+
+.about-section h1 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+.back-button {
+  display: inline-block;
+  background: #003366;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background 0.3s, transform 0.2s;
+  opacity: 0;
+}
+
+.back-button:hover {
+  background: #0055a5;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  opacity: 0;
+}
+
+/* Animations */
+@keyframes fadeInBox {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+.delay-4 { animation-delay: 2s; }
+
+/* Apply initial hidden opacity to animated elements */
+.slide-up, .fade-in {
+  opacity: 0;
+}
+
+       /* Homepage Button Styles */
+.homepage-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.home-page-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+}
+
+.home-page-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+.home-page-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .homepage-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .home-page-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .home-page-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - Smart Shop Manager</title>
+  <link rel="stylesheet" href="faq.css" />
+  <script src="https://kit.fontawesome.com/c1df782baf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="../img2/logo.png" alt="Smart Shop Manager Logo" />
+    </div>
+   <nav class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../Inventory/inventory.php">Inventory</a>
+      <a href="../Sales/sales.php">Sales</a>
+      <a href="../Staff/staff.php">Staff</a>
+      <a href="../Customer/customers.php">Customers</a>
+    </nav>
+  </header>
+
+  <main class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-question">What is Smart Shop Manager?</button>
+        <div class="faq-answer">
+          Smart Shop Manager is an advanced store management platform that helps you track inventory, manage sales, staff, and customers in one place.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I update my inventory?</button>
+        <div class="faq-answer">
+          Go to the Inventory module, click on the product, and edit its details such as quantity or pricing.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is customer support available?</button>
+        <div class="faq-answer">
+          Yes, our customer support team is available 24/7 to assist you with any questions.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I use it on my phone?</button>
+        <div class="faq-answer">
+          Absolutely! Smart Shop Manager is fully responsive and works on mobiles and tablets too.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is my data secure?</button>
+        <div class="faq-answer">
+          We use secure encryption and strict privacy controls to keep your business data safe.
+        </div>
+      </div>
+    </div>
+    <a class="back-btn" href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Smart Shop Manager. All rights reserved. Developed by Ajeet Verma
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach((q) => {
+      q.addEventListener("click", () => {
+        q.classList.toggle("active");
+        const answer = q.nextElementSibling;
+        answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
+      });
+    });
+  </script>
+</body>
+</html>

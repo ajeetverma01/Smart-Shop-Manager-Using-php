@@ -1,0 +1,156 @@
+/* Page base styles */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #e9f0f7; /* softened blue-tint background */
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #003366; /* deep navy */
+    margin-bottom: 30px;
+}
+
+/* Form container */
+form {
+    background-color: #f4f8fc; /* light blue-gray */
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Subtle card hover lift */
+form:hover {
+    transform: translateY(-3px);
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #002b5b; /* strong navy */
+    font-size: 15px;
+}
+
+/* Input + datalist styling */
+input[list="stock-items"],
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: 1px solid #b3c2d3; /* soft border blue-gray */
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 15px;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state for all inputs */
+input[list="stock-items"]:focus,
+form input[type="text"]:focus,
+form input[type="number"]:focus {
+    border-color: #0055a5;
+    box-shadow: 0 0 6px rgba(0, 85, 165, 0.3);
+    outline: none;
+    background-color: #fdfefe;
+}
+
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #0055a5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #003366;
+    transform: scale(1.03);
+}
+
+/* Message feedback */
+p {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #d1e7dd; /* success green */
+    color: #0f5132;
+    padding: 12px 16px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+       /* Homepage Button Styles */
+.homepage-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.home-page-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+}
+
+.home-page-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+.home-page-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .homepage-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .home-page-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .home-page-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
